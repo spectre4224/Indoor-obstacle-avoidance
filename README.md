@@ -1,30 +1,113 @@
-# Indoor obstacle avoidance
+# AI-Powered Indoor Obstacle Avoidance
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+An intelligent navigation system that uses AI pathfinding algorithms to detect and avoid obstacles in real-time indoor environments. This system demonstrates how autonomous robots, drones, and smart devices can navigate confined spaces safely and efficiently.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sceptredragonator-3920s-projects/v0-indoor-obstacle-avoidance)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/VOT3K5J99bD)
+## 🚀 Features
 
-## Overview
+- **Advanced A* Pathfinding**: Calculates optimal paths while considering obstacles and terrain complexity
+- **Real-time Obstacle Detection**: Simulated sensors continuously monitor the environment within configurable range
+- **Interactive Environment**: Click-based controls to position agents, set targets, and modify obstacles dynamically
+- **Performance Analytics**: Real-time statistics tracking path efficiency, obstacle detection, and navigation performance
+- **Adaptive Navigation**: Dynamic path recalculation ensures optimal navigation even when obstacles change during movement
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🎮 How to Use
 
-## Deployment
+### Interactive Controls
+- **Click**: Move the AI agent to a new position
+- **Shift + Click**: Set a new target destination  
+- **Ctrl + Click**: Toggle obstacles on/off
+- **Sensor Range Slider**: Adjust detection range (1-8 cells)
+- **Speed Control**: Modify navigation speed (100-1000ms per step)
 
-Your project is live at:
+### Navigation Controls
+- **Start/Pause**: Begin or pause the navigation simulation
+- **Reset**: Return to initial state
+- **Recalculate Path**: Force path recalculation with current settings
 
-**[https://vercel.com/sceptredragonator-3920s-projects/v0-indoor-obstacle-avoidance](https://vercel.com/sceptredragonator-3920s-projects/v0-indoor-obstacle-avoidance)**
+## 🛠️ Technology Stack
 
-## Build your app
+- **Next.js 15**: React framework with App Router
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first styling
+- **Canvas API**: Real-time visualization
+- **Radix UI**: Accessible component primitives
 
-Continue building your app on:
+## 🧠 AI Algorithm
 
-**[https://v0.dev/chat/projects/VOT3K5J99bD](https://v0.dev/chat/projects/VOT3K5J99bD)**
+The system implements the **A* (A-star) pathfinding algorithm**, which:
 
-## How It Works
+1. **Heuristic Search**: Uses Manhattan distance to estimate path costs
+2. **Optimal Pathfinding**: Guarantees the shortest path when one exists
+3. **Dynamic Adaptation**: Recalculates paths when obstacles change
+4. **8-Directional Movement**: Supports diagonal movement for more natural navigation
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 📊 Performance Metrics
+
+The system tracks several key performance indicators:
+
+- **Path Length**: Total steps required to reach the target
+- **Path Efficiency**: Ratio of optimal distance to actual path length
+- **Obstacles Detected**: Number of obstacles within sensor range
+- **Time Elapsed**: Total navigation time
+
+## 🎯 Applications
+
+This technology is applicable to:
+
+- **Warehouse Automation**: Autonomous robots navigating storage facilities
+- **Home Robotics**: Smart vacuum cleaners and service robots
+- **Indoor Drone Delivery**: Package delivery in confined spaces
+- **Assistive Technology**: Navigation aids for mobility devices
+- **Gaming AI**: Intelligent NPC movement in video games
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   \`\`\`bash
+   git clone https://github.com/your-username/indoor-obstacle-avoidance.git
+   cd indoor-obstacle-avoidance
+   \`\`\`
+
+2. **Install dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+3. **Run the development server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+4. **Open your browser**
+   Navigate to `http://localhost:3000` to see the application
+
+## 🏗️ Project Structure
+
+\`\`\`
+├── app/
+│   ├── page.tsx          # Main application component
+│   ├── layout.tsx        # Root layout
+│   └── globals.css       # Global styles
+├── components/
+│   └── ui/              # Reusable UI components
+├── lib/
+│   └── utils.ts         # Utility functions
+└── public/              # Static assets
+\`\`\`
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🔮 Future Enhancements
+
+- [ ] 3D visualization with Three.js
+- [ ] Machine learning for dynamic obstacle prediction
+- [ ] Multi-agent system with collision avoidance
+- [ ] Real sensor integration (camera/lidar)
+- [ ] Export functionality for navigation data
+- [ ] WebGL acceleration for larger environments
