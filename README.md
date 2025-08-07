@@ -81,20 +81,6 @@ This technology is applicable to:
 4. **Open your browser**
    Navigate to `http://localhost:3000` to see the application
 
-## 🏗️ Project Structure
-
-\`\`\`
-├── app/
-│   ├── page.tsx          # Main application component
-│   ├── layout.tsx        # Root layout
-│   └── globals.css       # Global styles
-├── components/
-│   └── ui/              # Reusable UI components
-├── lib/
-│   └── utils.ts         # Utility functions
-└── public/              # Static assets
-\`\`\`
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
